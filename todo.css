@@ -1,19 +1,15 @@
-
-body{
+body {
     margin: 0;
     padding: 0;
     background-color: rgb(48, 46, 45);
 
 }
 
-.container{
-    width: 100%;
-    /* height: 100vh; */
-    
-    
+.container {    
+    margin: auto;
 }
 
-#main{
+#main {
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -23,14 +19,13 @@ body{
     /* border: 1px solid red; */
 }
 
-#input{
+#input {
     margin-top: 40px;
     max-width: 500px;
     width: 100%;
     text-align: center;
     display: flex;
     flex-direction: column;
-
     align-items: center;
     box-sizing: border-box;
     background-color: rgb(82, 82, 109);
@@ -39,34 +34,37 @@ body{
     /* border: 1px solid orange; */
 }
 
-#input h2{
+#input h2 {
     font-size: 38px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-#input>div{
+#input>div {
     display: flex;
     justify-content: space-around;
     align-items: center;
     gap: 10px;
-    /* border: 1px solid red; */
-text-align: center;
-padding: 10px;
-    
+    /* border: 1px solid rgb(34, 31, 31); */
+    text-align: center;
+    padding: 10px;
+    width: max-content;
+
 }
 
-#icon{
+#icon {
     font-size: 50px;
     color: wheat;
     margin-bottom: 10px;
     cursor: pointer;
     transition: 0.3s;
 }
-#icon:hover,button:hover{
-  transform: scale(0.8);
+
+#icon:hover,
+button:hover {
+    transform: scale(0.8);
 }
 
-input{
+input {
     width: 350px;
     height: 50px;
     border: none;
@@ -79,48 +77,42 @@ input{
     color: rgb(233, 155, 146);
 }
 
-.listdiv{
-    /* border: 2px solid red; */
+.listdiv {
+    /* border: 2px solid rgb(204, 151, 151); */
     width: 500px;
-    /* height: 300px; */
     display: flex;
     padding: 30px;
-    display: flex;
     justify-content: space-around;
     gap: 10px;
- 
-    
+
+
 }
 
-.todos_div{
+.todos_div {
     border: 1px solid yellow;
-    width: 50%;
-    /* height: 300px; */
-    /* max-height: 1000px; */
+    width: 50%;  
     border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    /* justify-content: center; */
+    flex-direction: column;  
     align-items: center;
-    /* text-align: center; */
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.todos_div h3{
+.todos_div h3 {
     font-size: 25px;
     font-weight: 700;
     text-decoration: underline;
 }
 
-#pending_div, #inprogress_div{
+#pending_div,
+#inprogress_div {
     font-size: 20px;
-    /* border: 1px solid red; */
-    /* padding-left: 10px; */width: 200px;
+    width: 200px;
     padding: 0 10px;
     color: rgb(233, 155, 146);
 }
 
-.listdiv li{
+.listdiv li {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -128,8 +120,42 @@ input{
     margin: 10px 0;
 }
 
-li span{
-    /* margin-left: 30px; */
+li span {    
     cursor: pointer;
     transition: 0.3s;
+}
+
+@media screen and (max-width: 450px) {
+    input {
+        max-width: 200px;
+        height: 40px;
+
+    }
+
+    .listdiv {
+        width: 300px;
+    }
+
+    .todos_div>h3,
+    #inprogress_div,
+    #pending_div {
+        font-size: 13px;
+    }
+
+    #pending_div,
+    #inprogress_div {
+        width: 100px;
+    }
+
+    #input {
+        max-width: 300px;
+    }
+    #input>div {
+       padding: 10px;
+    }
+
+    #icon{
+        font-size: 30px;
+    }
+
 }
