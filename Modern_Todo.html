@@ -1,0 +1,94 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div id="main">
+
+            <div id="input">
+                <h2>Add Your ToDo</h2>
+                <div>
+                    <input type="text" id="string">
+                    <i class="fa fa-plus-circle" id="icon" onclick=" onSubmitHandler()"></i>
+                </div>
+
+
+
+            </div>
+
+            <div class="listdiv">
+
+                <div class="todos_div">
+                    <h3>Pending ToDo</h3>
+                    <div id="pending_div">
+                        
+                    </div>
+                </div>
+
+                <div class="todos_div">
+                    <h3>In Progress ToDo</h3>
+                    <div id="inprogress_div"></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        let input = document.getElementById("string");
+        let pending = document.getElementById("pending_div");
+
+        function onSubmitHandler() {
+
+            let list = document.createElement("li");
+            let erase = document.createElement("span");
+            let progress = document.createElement("span")
+            erase.innerHTML = "<span>&#10006</span>"
+            progress.innerHTML =  "<span>&#10003</span>"
+               
+
+            
+            list.innerText = input.value;
+            if(list.innerText.length>0){
+                pending.appendChild(list);
+            input.value = "";
+            list.appendChild(erase);
+            list.appendChild(progress);
+
+            erase.addEventListener("click", function () {
+
+                pending.removeChild(list);
+            })
+
+            progress.addEventListener("click", function () {
+
+                document.getElementById("inprogress_div").appendChild(list);
+                list.removeChild(progress);
+
+                erase.addEventListener("click", function () {
+                    document.getElementById("inprogress_div").removeChild(list)
+                })
+
+
+            })
+            }else{
+                alert("Please add a valid Todo!")
+            }
+           
+
+
+        }
+
+
+    </script>
+</body>
+
+</html>
