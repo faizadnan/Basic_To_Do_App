@@ -1,0 +1,135 @@
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgb(48, 46, 45);
+
+}
+
+.container{
+    width: 100%;
+    /* height: 100vh; */
+    
+    
+}
+
+#main{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    /* border: 1px solid red; */
+}
+
+#input{
+    margin-top: 40px;
+    max-width: 500px;
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    box-sizing: border-box;
+    background-color: rgb(82, 82, 109);
+    border-radius: 10px;
+
+    /* border: 1px solid orange; */
+}
+
+#input h2{
+    font-size: 38px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#input>div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10px;
+    /* border: 1px solid red; */
+text-align: center;
+padding: 10px;
+    
+}
+
+#icon{
+    font-size: 50px;
+    color: wheat;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+#icon:hover,button:hover{
+  transform: scale(0.8);
+}
+
+input{
+    width: 350px;
+    height: 50px;
+    border: none;
+    outline: none;
+    border-radius: 50px;
+    margin-bottom: 10px;
+    background-color: rgb(122, 103, 103);
+    padding-left: 30px;
+    font-size: 25px;
+    color: rgb(233, 155, 146);
+}
+
+.listdiv{
+    /* border: 2px solid red; */
+    width: 500px;
+    /* height: 300px; */
+    display: flex;
+    padding: 30px;
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+ 
+    
+}
+
+.todos_div{
+    border: 1px solid yellow;
+    width: 50%;
+    /* height: 300px; */
+    /* max-height: 1000px; */
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    /* text-align: center; */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.todos_div h3{
+    font-size: 25px;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+#pending_div, #inprogress_div{
+    font-size: 20px;
+    /* border: 1px solid red; */
+    /* padding-left: 10px; */width: 200px;
+    padding: 0 10px;
+    color: rgb(233, 155, 146);
+}
+
+.listdiv li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 1px solid red; */
+    margin: 10px 0;
+}
+
+li span{
+    /* margin-left: 30px; */
+    cursor: pointer;
+    transition: 0.3s;
+}
